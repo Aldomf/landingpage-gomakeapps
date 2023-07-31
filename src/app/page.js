@@ -1,14 +1,12 @@
-import Layout from '@/layout/Layout'
-import React from 'react'
+import Layout from "@/layout/Layout";
+
 
 function LandingPage() {
   return (
     <>
-    <Layout>
-      <h1>LandingPage</h1>
-    </Layout>
+      <Layout/>
     </>
-  )
+  );
 }
 
-export default LandingPage
+export default LandingPage;

@@ -1,23 +1,28 @@
-import React from 'react'
+import Logo from "@/components/Logo";
+import Navbar from "@/components/Navbar";
+import LanguageSelector from "@/components/LanguageSelector";
 
 function Header() {
   return (
-    <header>
-  <nav>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
-  <h1>Logo</h1>
-  <form>
-    <input type="text" placeholder="Search..."/>
-    <button type="submit">Search</button>
-  </form>
-</header>
-
-  )
+    <header
+      className="bg-top bg-no-repeat bg-contain"
+      style={{
+        backgroundImage: "url('/assets/electronics-development-engineer.png')",
+        height: "1259px",
+      }}
+    >
+      <div
+        className="w-full h-32 flex items-center justify-between"
+        style={{
+          backgroundImage: "url('/assets/rectangle-1.png')",
+        }}
+      >
+        <Logo />
+        <Navbar />
+        <LanguageSelector />
+      </div>
+    </header>
+  );
 }
 
-export default Header
+export default Header;
