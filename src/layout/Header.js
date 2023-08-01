@@ -1,26 +1,23 @@
 import Logo from "@/components/Logo";
 import Navbar from "@/components/Navbar";
 import LanguageSelector from "@/components/LanguageSelector";
+import Hero from "@/components/Hero";
+import Image from "next/image";
 
 function Header() {
   return (
     <header
-      className="bg-top bg-no-repeat bg-contain"
+      className="bg-top bg-no-repeat bg-contain bg-[url('/assets/electronics-development-engineer.png')] "
       style={{
-        backgroundImage: "url('/assets/electronics-development-engineer.png')",
-        height: "1259px",
+        height: "958px",
       }}
     >
-      <div
-        className="w-full h-32 flex items-center justify-between"
-        style={{
-          backgroundImage: "url('/assets/rectangle-1.png')",
-        }}
-      >
+      <div className="w-full h-32 flex items-center justify-center bg-[url('/assets/rectangle-1.png')]">
         <Logo />
         <Navbar />
         <LanguageSelector />
       </div>
+      <Hero />
     </header>
   );
 }

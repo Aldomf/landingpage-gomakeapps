@@ -19,7 +19,7 @@ function LanguageSelector() {
     };
 
   return (
-    <div className="relative">
+    <div className="relative ml-10">
           <div className="mr-10 flex items-center justify-between w-28 relative">
             <Image
               src="/assets/translate.png"

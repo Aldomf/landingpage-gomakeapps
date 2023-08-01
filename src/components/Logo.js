@@ -7,7 +7,7 @@ function Logo() {
           width={121}
           height={151}
           alt="logo"
-          className=""
+          className="mr-16"
         />
   )
 }
