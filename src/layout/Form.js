@@ -1,7 +1,24 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Image from "next/image";
 
 function Form() {
+  const [lastname, setLastname] = useState("");
+  const [firstname, setFirstname] = useState("");
+  const [society, setSociety] = useState("");
+  const [email, setEmail] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    console.log("Form submitted");
+    console.log("Lastname:", lastname);
+    console.log("Firstname:", firstname);
+    console.log("Society:", society);
+    console.log("Email:", email);
+  };
+
   return (
     <div
       className="m-auto w-3/4"
@@ -38,18 +55,22 @@ function Form() {
         style={{ borderRadius: "90px" }}
       >
         <div className="flex flex-col">
-          <form className="flex justify-around">
+          <form className="flex justify-around" onSubmit={handleSubmit}>
             <input
               type="text"
               name="lastname"
               placeholder="Nom*"
               className="bg-[#c4d1ff] rounded-full px-10 py-5 placeholder-black"
+              value={lastname}
+              onChange={(e) => setLastname(e.target.value)}
             />
             <input
               type="text"
               name="firstname"
               placeholder="Prénom*"
               className="bg-[#c4d1ff] rounded-full px-10 py-5 placeholder-black"
+              value={firstname}
+              onChange={(e) => setFirstname(e.target.value)}
             />
           </form>
           <div className="flex justify-center">
@@ -61,18 +82,22 @@ function Form() {
               className="ml-10"
             />
           </div>
-          <form className="flex justify-around">
+          <form className="flex justify-around" onSubmit={handleSubmit}>
             <input
               type="text"
               name="society"
               placeholder="Société (optionel)"
               className="bg-[#c4d1ff] rounded-full px-10 py-5 placeholder-black"
+              value={society}
+              onChange={(e) => setSociety(e.target.value)}
             />
             <input
               type="email"
               name="email"
               placeholder="Email*"
               className="bg-[#c4d1ff] rounded-full px-10 py-5 placeholder-black"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
           </form>
         </div>
@@ -84,12 +109,11 @@ function Form() {
               background:
                 "linear-gradient(-45deg, black 0%, black 50%, #3399ff 50%, #0033ff 100%)",
             }}
+            onClick={handleSubmit}
           >
             Commencer
           </button>
-          <p
-            className="text-xs text-[#0039ff] font-bold mt-1"
-          >
+          <p className="text-xs text-[#0039ff] font-bold mt-1">
             Accéder au formulaire
           </p>
         </div>
