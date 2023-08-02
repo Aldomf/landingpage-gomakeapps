@@ -2,7 +2,6 @@ import Logo from "@/components/Logo";
 import Navbar from "@/components/Navbar";
 import LanguageSelector from "@/components/LanguageSelector";
 import Hero from "@/components/Hero";
-import Image from "next/image";
 
 function Header() {
   return (
