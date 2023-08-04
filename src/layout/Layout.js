@@ -3,6 +3,7 @@ import Header from "./Header";
 import Form from "./Form";
 import SectionOne from "./SectionOne";
 import SectionTwo from "./SectionTwo";
+import SectionThree from "./SectionThree";
 
 function Layout({children}) {
   return (
@@ -11,6 +12,8 @@ function Layout({children}) {
       <Form />
       <SectionOne/>
       <SectionTwo/>
+      <SectionThree/>
+      <Form/>
 
       {children}
     </>
